@@ -1,95 +1,14 @@
 {
   "base_urls": {
-    "chrome": "https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions.json",
-    "edge": "https://msedgewebdriverstorage.blob.core.windows.net/edgewebdriver?comp=list&timeout=60000",
-    "firefox": "https://github.com/mozilla/geckodriver/releases/download/v0.34.0/geckodriver-v0.34.0-win32.zip"
+    "chrome": "https://storage.googleapis.com/chrome-for-testing-public",
+    "edge": "",
+    "firefox": ""
   },
-  "driver_file_name": {
-    "chrome": {
-      "win": "chromedriver.exe",
-      "mac": "chromedriver",
-      "linux": "chromedriver"
-    },
-    "edge": {
-      "win": "msedgedriver.exe",
-      "mac": "",
-      "linux": ""
-    },
-    "firefox": {
-      "win": "geckodriver.exe",
-      "mac": "geckodriver",
-      "linux": "geckodriver"
-    }
-  },
-  "browser_version_commands": {
-    "chrome": {
-      "win": [
-        [
-          "reg",
-          "query",
-          "HKEY_CURRENT_USER\\Software\\Google\\Chrome\\BLBeacon",
-          "/v",
-          "version"
-        ],
-        [
-          "reg",
-          "query",
-          "HKEY_CURRENT_USER\\Software\\Chromium\\BLBeacon",
-          "/v",
-          "version"
-        ]
-      ],
-      "linux": [
-        ["chromium", "--version"],
-        ["chromium-browser", "--version"],
-        ["google-chrome", "--version"]
-      ],
-      "mac": [
-        [
-          "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-          "--version"
-        ],
-        ["/Applications/Chromium.app/Contents/MacOS/Chromium", "--version"]
-      ]
-    },
-    "firefox": {
-      "win": [
-        [
-          "reg",
-          "query",
-          "HKEY_LOCAL_MACHINE\\Software\\Mozilla\\Mozilla Firefox",
-          "/v",
-          "CurrentVersion"
-        ],
-        [
-          "reg",
-          "query",
-          "HKEY_CURRENT_USER\\Software\\Mozilla\\Mozilla Firefox",
-          "/v",
-          "CurrentVersion"
-        ]
-      ],
-      "linux": [["firefox", "--version", "--headless"]],
-      "mac": [
-        [
-          "/Applications/Firefox.app/Contents/MacOS/firefox-bin",
-          "--version",
-          "--headless"
-        ]
-      ]
-    },
-    "edge": {
-      "win": [
-        [
-          "reg",
-          "query",
-          "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Edge\\BLBeacon",
-          "/v",
-          "CurrentVersion"
-        ]
-      ],
-      "linux": [],
-      "mac": []
-    }
+  "platform_type": {
+    "linux64": "linux64",
+    "mac-arm64": "mac-arm64",
+    "mac-x64": "mac-x64",
+    "win32": "win32",
+    "win64": "win64"
   }
 }

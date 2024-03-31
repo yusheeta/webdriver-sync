@@ -19,10 +19,7 @@ def inside_virtualenv():
 def raise_runtime_error(msg):
     LOGGER.error(msg)
     raise RuntimeError(msg)
-
-# def versiontuple(v):
-#     return tuple(map(int, (v.split("."))))
-
+    
 def get_output(cmd, **kwargs):
     try:
         output = subprocess.check_output(cmd, **kwargs, stderr=subprocess.STDOUT)

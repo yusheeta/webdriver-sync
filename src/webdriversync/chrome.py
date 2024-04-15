@@ -32,3 +32,7 @@ class ChromeDriverManager:
       raise ValueError("Unsupported Platform")
 
     return f"{base_url}/{chrome_version}/{platform_type}/chromedriver-{platform_type}.zip"
+
+
+
+url = ChromeDriverManager.construct_chromedriver_url("123.0.6312.107", "win64")
